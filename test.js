@@ -23,7 +23,11 @@ test('Test logic.js and test.js are connected', function(t) {
 
 
 // DeleteToDo
-test('Example test', function(t) {
+test('Function returns array', function(t) {
+  var actual = todoFunctions.deleteTodo([1, 2], 5); 
+  var expected = [1,2]; 
   t.pass();
   t.end();
 });
+
+test('Function returns clone of array')
