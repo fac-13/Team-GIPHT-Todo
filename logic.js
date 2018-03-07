@@ -36,6 +36,7 @@ var todoFunctions = {
     // hint: array.concat
     return newTodo;
   },
+
   deleteTodo: function(todos, idToDelete) {
     var clone = this.cloneArrayOfObjects(todos); 
     return clone.filter(x => x.id !== idToDelete); 

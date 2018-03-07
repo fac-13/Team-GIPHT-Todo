@@ -33,6 +33,16 @@ test('Function returns filtered array of objects', function(t){
   t.end();
 });
 
+var z = [{id:1, description:"test"}, {id:2, description:"test2"}];
+test('Function returns filtered array of objects', function(t){ 
+  var actual = todoFunctions.deleteTodo(z, 1); 
+  var expected = [{id:2, description:"test2"}];    
+  t.deepEqual(actual, expected, 'should returns filtered array of objects');
+  t.deepEqual(z, [{id:1, description:"test"}, {id:2, description:"test2"}], 'check that original array is unchanged'); 
+  t.end();
+});
+
+
 
 
 
