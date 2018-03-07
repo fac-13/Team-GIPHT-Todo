@@ -1,4 +1,6 @@
 // part 2 linking it all together
+var todoFunctions = require('./logic');
+
 // The function here is called an iife,
 // it keeps everything inside hidden from the rest of our application
 (function() {
@@ -16,7 +18,7 @@
   var createTodoNode = function(todo) {
     var todoNode = document.createElement('li');
     // you will need to use addEventListener
-
+    
     // add span holding description
 
     // this adds the delete button
