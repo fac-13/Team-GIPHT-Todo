@@ -14,25 +14,15 @@ var state = [
 ];
 
 // AddToDo
-test('Test', function(t) {
+test('Test logic.js and test.js are connected', function(t) {
   var actual = todoFunctions.addTodo(state, 1);
   var expected = 1;
-  t.equal(actual, expected, 'should return array of objects');
-  t.end();
-});
-
-test('Example test', function(t) {
-  t.pass();
+  t.equal(actual, expected, 'should return a value');
   t.end();
 });
 
 
 // DeleteToDo
-test('Example test', function(t) {
-  t.pass();
-  t.end();
-});
-
 test('Example test', function(t) {
   t.pass();
   t.end();
