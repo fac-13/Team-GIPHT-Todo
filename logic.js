@@ -47,9 +47,9 @@ var todoFunctions = {
 
   markTodo: function(todos, idToMark) {
     var clone = this.cloneArrayOfObjects(todos); 
-    clone = clone.map(function(x){
-      if (x.id == idToMark){ x.done = false;}
-
+    return clone.map(function(x){
+      if (x.id == idToMark){ x.done = true;}
+        else {x.done = false;}
     })
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
