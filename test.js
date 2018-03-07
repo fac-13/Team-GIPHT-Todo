@@ -31,9 +31,9 @@ test('Test if description is added to todo entry', function(t) {
 });
 
 test('Test if id is added to todo entry', function(t) {
-  var actual = todoFunctions.addTodo([], 'buy eggs')[0].id;
-  var expected = todoFunctions.generateId()-1;
-  t.deepEqual(actual, expected, 'should return id of new object');
+  var actual = todoFunctions.addTodo([], 'buy eggs')[0].hasOwnProperty('id');
+  var expected = true;
+  t.equal(actual, expected, 'should return true');
   t.end();
 });
 
@@ -41,6 +41,7 @@ test('Test if done is added to todo entry', function(t) {
   var actual = todoFunctions.addTodo([], 'buy eggs')[0].done;
   var expected = false;
   t.deepEqual(actual, expected, 'should return a boolean');
+  t.end();
 });
 
 
