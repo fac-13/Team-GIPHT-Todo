@@ -2,6 +2,12 @@
 // you can access these on todo.todoFunctions
 // For part one we expect you to use tdd
 
+var state = [
+  { id: -3, description: 'first todo' },
+  { id: -2, description: 'second todo' },
+  { id: -1, description: 'third todo' },
+];
+
 var todoFunctions = {
   // todoFunctions.generateId() will give you a unique id
   // You do not need to understand the implementation of this function.
@@ -28,6 +34,7 @@ var todoFunctions = {
     // returns a new array, it should contain todos with the newTodo added to the end.
     // add an id to the newTodo. You can use the generateId function to create an id.
     // hint: array.concat
+    return newTodo;
   },
   deleteTodo: function(todos, idToDelete) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
