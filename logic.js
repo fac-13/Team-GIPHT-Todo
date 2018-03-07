@@ -2,11 +2,6 @@
 // you can access these on todo.todoFunctions
 // For part one we expect you to use tdd
 
-var state = [
-  { id: -3, description: 'first todo' },
-  { id: -2, description: 'second todo' },
-  { id: -1, description: 'third todo' },
-];
 
 var todoFunctions = {
   // todoFunctions.generateId() will give you a unique id
@@ -34,12 +29,20 @@ var todoFunctions = {
     // returns a new array, it should contain todos with the newTodo added to the end.
     // add an id to the newTodo. You can use the generateId function to create an id.
     // hint: array.concat
-    return newArray;
+    var updatedTodos = this.cloneArrayOfObjects(todos)
+    updatedTodos.push({
+      id: this.generateId(),
+      description: newTodo,
+      done: false
+    });
+    return updatedTodos; 
   },
 
   deleteTodo: function(todos, idToDelete) {
     var clone = this.cloneArrayOfObjects(todos); 
-    return clone.filter(x => x.id !== idToDelete); 
+    return clone.filter(function(x) {
+      return x.id !== idToDelete;
+    });
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
