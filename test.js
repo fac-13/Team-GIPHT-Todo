@@ -75,3 +75,11 @@ test('Function returns filtered array of objects', function(t){
   t.deepEqual(z, [{id:1, description:"test"}, {id:2, description:"test2"}], 'check that original array is unchanged'); 
   t.end();
 });
+
+//MarkToDo
+test('Function returns an array of objects where obj with id = idToMark has done value toggled', function(t){ 
+  var actual = todoFunctions.markTodo([{id:1, description:"test", done: false}, {id:2, description:"test2", done: false;}], 1); 
+  var expected = [{id:1, description:"test", done: true}, {id:2, description:"test2", done: false;}];    
+  t.deepEqual(actual, expected, 'should return array with obj with different done value');
+  t.end();
+});
