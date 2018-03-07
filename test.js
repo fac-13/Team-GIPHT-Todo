@@ -1,33 +1,39 @@
 var test = require('tape');
 var todoFunctions = require('./logic');
 
+
 test('Example test', function(t) {
   t.pass();
   t.end();
 });
 
 
-var state = [
-  { id: -3, description: 'first todo' },
-  { id: -2, description: 'second todo' },
-  { id: -1, description: 'third todo' },
-];
-
 // AddToDo
-test('Test logic.js and test.js are connected', function(t) {
-  var actual = todoFunctions.addTodo(state, 1);
-  var expected = 1;
-  t.equal(actual, expected, 'should return a value');
-  t.end();
-});
 
 
 // DeleteToDo
-test('Function returns array', function(t) {
-  var actual = todoFunctions.deleteTodo([1, 2], 5); 
+test('Function returns clone of array', function(t){ 
+  var actual = todoFunctions.deleteTodo([1,2], 5); 
   var expected = [1,2]; 
-  t.pass();
+  t.deepEqual(actual, expected, 'should return a clone of array');
   t.end();
 });
 
-test('Function returns clone of array')
+test('Function returns clone of array of objects', function(t){ 
+  var actual = todoFunctions.deleteTodo([{1: "test"}, {2: "test2"}], 5); 
+  var expected =  [{1: "test"}, {2: "test2"}]; 
+  t.deepEqual(actual, expected, 'should return a clone of array of objects');
+  t.end();
+});
+
+test('Function returns filtered array of objects', function(t){ 
+  var actual = todoFunctions.deleteTodo([{id:1, description:"test"}, {id:2, description:"test2"}], 1); 
+  var expected = [{id:2, description:"test2"}];    
+  t.deepEqual(actual, expected, 'should returns filtered array of objects');
+  t.end();
+});
+
+
+
+
+
