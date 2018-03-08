@@ -19,6 +19,12 @@
     // you will need to use addEventListener
     
     // add span holding description
+    var divNode = document.createElement('div');
+    todoNode.appendChild(divNode);
+    var spanNode = document.createElement('span');
+    divNode.appendChild(spanNode);
+    var textNode = document.createTextNode(todo.description);
+    spanNode.appendChild(textNode);
 
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
