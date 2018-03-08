@@ -1,7 +1,12 @@
 body {
   max-width: 1140px;
+  height: 100vh;
   margin: 0 auto;
   padding: 0;
+  background-color: #ff9ff3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 button {
@@ -28,4 +33,8 @@ i {
 #add-todo {
   width: 40%;
   margin: 0 auto;
+}
+
+#add-todo {
+    text-align: center;
 }
