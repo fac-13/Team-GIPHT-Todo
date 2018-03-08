@@ -13,20 +13,20 @@ body {
 /* Header */
 
 h1 {
-    color: #222f3e;
-    font-family: 'Press Start 2P', cursive;
+  color: #222f3e;
+  font-family: "Press Start 2P", cursive;
 }
 
 /* To do container */
 
 #todo-container {
-    height: 50%;
-    overflow: scroll;
+  height: 50%;
+  overflow: scroll;
 }
 
 #add-todo {
-    padding-top: 20px; 
-    text-align: center;
+  padding-top: 20px;
+  text-align: center;
 }
 
 #todo-container,
@@ -40,20 +40,14 @@ button {
   width: 2rem;
   height: 2rem;
   text-align: center;
-  position: relative;
   margin: 0 0.5rem;
 }
 
 i {
   margin: 0 auto;
   padding: 0;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
-
-
-
+.marked {
+  text-decoration: line-through;
+}
