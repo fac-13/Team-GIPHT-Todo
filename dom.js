@@ -7,11 +7,7 @@
   var container = document.getElementById('todo-container');
   var addTodoForm = document.getElementById('add-todo');
 
-  var state = [
-    { id: -3, description: 'first todo' },
-    { id: -2, description: 'second todo' },
-    { id: -1, description: 'third todo' },
-  ]; // this is our initial todoList
+  var state = []; // this is our initial todoList
 
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
@@ -42,10 +38,13 @@
     
     // add markTodo button
     var markButtonNode = document.createElement('button');
+
     markButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
-      update(newState);
+      spanNode.classList.toggle("marked");
+      state = newState;        
     });
+
     todoNode.appendChild(markButtonNode);
    
     //css classes for mark button 
@@ -75,6 +74,7 @@
   // you should not need to change this function
   var update = function(newState) {
     state = newState;
+    console.log(state);
     renderState(state);
   };
 
