@@ -29,8 +29,11 @@
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
     });
-    todoNode.appendChild(deleteButtonNode);
-
+    var buttonsDiv = document.createElement('div');
+    divNode.appendChild(buttonsDiv);
+    buttonsDiv.appendChild(deleteButtonNode);
+    todoNode.appendChild(buttonsDiv);
+    buttonsDiv.classList.add('buttons-div');
     //css classes for delete button
     var deleteIcon = document.createElement("i"); 
     deleteButtonNode.appendChild(deleteIcon); 
@@ -43,12 +46,15 @@
 
     markButtonNode.addEventListener('click', function(event) {
       var newState = todoFunctions.markTodo(state, todo.id);
-      spanNode.classList.toggle("marked");
-      state = newState;        
+      update(newState);
     });
-
-    todoNode.appendChild(markButtonNode);
-   
+    if (todo.done) {
+      spanNode.classList.add('marked');
+    } else {
+      spanNode.classList.remove('marked');
+    }
+    buttonsDiv.appendChild(markButtonNode);
+    
     //css classes for mark button 
     var markIcon = document.createElement("i"); 
     markButtonNode.appendChild(markIcon); 
@@ -69,14 +75,12 @@
       // hint: todoFunctions.addTodo
       var newState = todoFunctions.addTodo(state, description);
       update(newState);
-      console.log(newState);
     });
   }
 
   // you should not need to change this function
   var update = function(newState) {
     state = newState;
-    console.log(state);
     renderState(state);
   };
 
