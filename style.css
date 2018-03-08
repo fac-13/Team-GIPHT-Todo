@@ -1,1 +1,17 @@
+button {
+   width: 2rem; 
+   height: 2rem; 
+   text-align: center; 
+   position: relative;
+   margin: 0 0.5rem; 
+}
 
+i {
+margin: 0 auto; 
+padding: 0; 
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+}
