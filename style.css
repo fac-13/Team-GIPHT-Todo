@@ -21,7 +21,7 @@ h1 {
 
 #todo-container {
   height: 50%;
-  overflow: scroll;
+  overflow: auto;
 }
 
 #add-todo {
