@@ -7,6 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 button {
@@ -29,12 +30,18 @@ i {
 
 /* To do container */
 
-#todo-container,
-#add-todo {
-  width: 40%;
-  margin: 0 auto;
+#todo-container {
+    max-height: 50%;
+    overflow: scroll;
 }
 
 #add-todo {
     text-align: center;
 }
+
+#todo-container,
+#add-todo {
+  width: 40%;
+}
+
+
