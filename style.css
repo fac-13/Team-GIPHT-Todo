@@ -10,6 +10,32 @@ body {
   align-items: center;
 }
 
+/* Header */
+
+h1 {
+    color: #222f3e;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* To do container */
+
+#todo-container {
+    height: 50%;
+    overflow: scroll;
+}
+
+#add-todo {
+    padding-top: 20px; 
+    text-align: center;
+}
+
+#todo-container,
+#add-todo {
+  width: 40%;
+}
+
+/* Icons */
+
 button {
   width: 2rem;
   height: 2rem;
@@ -28,20 +54,6 @@ i {
   right: 0;
 }
 
-/* To do container */
 
-#todo-container {
-    max-height: 50%;
-    overflow: scroll;
-}
-
-#add-todo {
-    text-align: center;
-}
-
-#todo-container,
-#add-todo {
-  width: 40%;
-}
 
 
