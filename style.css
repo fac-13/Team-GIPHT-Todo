@@ -4,7 +4,7 @@ html {
 
 body {
   max-width: 1140px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   height: 100vh;
   background-color: #ff9ff3;
   display: flex;
@@ -29,11 +29,15 @@ h1 {
 
 #todo-container {
   height: 50%;
-  width: 40%;
   overflow: auto;
+  width: 80%;
 }
 
 /* List */
+ul {
+  padding: 0;
+}
+
 li {
   display: flex;
   align-items: center;
@@ -70,12 +74,12 @@ i {
 
 /* Form */
 #add-todo {
-  width: 90%;
+  width: 80%;
   padding-top: 20px;
   text-align: center;
 }
 
-input[type=text] {
+input[type="text"] {
   background-color: #fafafa;
   border: solid 5px #f368e0;
   border-radius: 20px;
@@ -85,9 +89,9 @@ input[type=text] {
   height: 10rem;
 }
 
-input[type=submit] {
+input[type="submit"] {
   font-size: 3rem;
-  font-family: 'press start 2p', cursive;
+  font-family: "press start 2p", cursive;
   color: #222f3e;
   background-color: #f368e0;
   border: solid 5px #222f3e;
@@ -95,13 +99,10 @@ input[type=submit] {
   width: 60%;
   margin: 5rem;
   height: 10rem;
-
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   color: #fafafa;
   background-color: #222f3e;
   border: solid 5px #f368e0;
-  
 }
-
