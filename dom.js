@@ -43,7 +43,8 @@ var todoFunctions = require('./logic');
       // what does event.preventDefault do?
       // what is inside event.target?
 
-      var description = '?'; // event.target ....
+      event.preventDefault();
+      var description = event.target[0].value;
 
       // hint: todoFunctions.addTodo
       var newState = []; // ?? change this!
