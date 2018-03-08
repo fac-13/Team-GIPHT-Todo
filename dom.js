@@ -34,6 +34,12 @@
     });
     todoNode.appendChild(deleteButtonNode);
 
+    //css classes for delete button
+    var deleteIcon = document.createElement("i"); 
+    deleteButtonNode.appendChild(deleteIcon); 
+    deleteIcon.classList.add("far", "fa-trash-alt"); 
+    //add font awesome class to icon
+    
     // add markTodo button
     var markButtonNode = document.createElement('button');
     markButtonNode.addEventListener('click', function(event) {
@@ -41,8 +47,12 @@
       update(newState);
     });
     todoNode.appendChild(markButtonNode);
-    // add classes for css
-
+   
+    //css classes for mark button 
+    var markIcon = document.createElement("i"); 
+    markButtonNode.appendChild(markIcon); 
+    markIcon.classList.add("fas", "fa-check"); 
+    
     return todoNode;
   };
 
