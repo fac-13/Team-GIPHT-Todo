@@ -1,5 +1,4 @@
 // part 2 linking it all together
-var todoFunctions = require('./logic');
 
 // The function here is called an iife,
 // it keeps everything inside hidden from the rest of our application
@@ -40,15 +39,15 @@ var todoFunctions = require('./logic');
   if (addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
       // https://developer.mozilla.org/en-US/docs/Web/Events/submit
-      // what does event.preventDefault do?
+      // what does event.preventD      var description = '?'; // event.target ....efault do?
       // what is inside event.target?
-
       event.preventDefault();
       var description = event.target[0].value;
 
       // hint: todoFunctions.addTodo
-      var newState = []; // ?? change this!
+      var newState = todoFunctions.addTodo(state, description);
       update(newState);
+      console.log(newState);
     });
   }
 
