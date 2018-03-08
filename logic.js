@@ -56,8 +56,7 @@ var todoFunctions = {
     // hint: array.map
     var clone = this.cloneArrayOfObjects(todos);
     return clone.map(function (x) {
-      if (x.id == idToMark) { x.done = true; }
-      else { x.done = false; }
+      if (x.id == idToMark) { x.done = !x.done }
       return x;
     })
   },
