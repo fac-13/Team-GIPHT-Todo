@@ -75,3 +75,18 @@ test('Function returns filtered array of objects', function(t){
   t.deepEqual(z, [{id:1, description:"test"}, {id:2, description:"test2"}], 'check that original array is unchanged'); 
   t.end();
 });
+
+//MarkToDo
+test('Function tests that done value is toggled to true', function(t){ 
+  var actual = todoFunctions.markTodo([{id:1, description:"test", done: false}, {id:2, description:"test2", done: false}], 1); 
+  var expected = [{id:1, description:"test", done: true}, {id:2, description:"test2", done: false}];    
+  t.deepEqual(actual, expected, 'should return object with done value changed to true');
+  t.end();
+});
+
+test('Function tests that done value is toggled to false', function(t){ 
+  var actual = todoFunctions.markTodo([{id:1, description:"test", done: true}, {id:2, description:"test2", done: false}], 1); 
+  var expected = [{id:1, description:"test", done: false}, {id:2, description:"test2", done: false}];    
+  t.deepEqual(actual, expected, 'should return object with done value changed to false');
+  t.end();
+});
