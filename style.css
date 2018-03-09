@@ -104,7 +104,7 @@ input[type="text"] {
   background-color: #fafafa;
   border: solid 5px #222f3e;
   width: 75%;
-  padding: 1rem;
+  padding: 0 1rem;
   font-size: 3rem;
   height: 10vh; 
 }
