@@ -12,17 +12,6 @@ This project was to create a to do list app to add things to do. You should also
 > * to mark tasks as complete so that I can focus on the tasks I have left
 > * the to-dos to be large enough so that I don't hit the wrong one with my thumb
 
-> #### _Potential stretch goals_
-
-> **As a disorganised person I want:**
-
-> * to edit my to-dos so that I can amend them if the task changes
-> * to click on any part of a to-do to mark it as complete so that it's easier for me to check to-dos off
-> * a visual indication of which to-do I'm about to interact with so that it's clear what I'm editing
-
-
-_To be written_
-
 ## HOW?
 > Priorities
 
