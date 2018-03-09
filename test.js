@@ -1,7 +1,6 @@
 var test = require('tape');
 var todoFunctions = require('./logic');
 
-
 test('Example test', function(t) {
   t.pass();
   t.end();
