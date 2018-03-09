@@ -9,7 +9,7 @@ body {
   background-color: #ff9ff3;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -19,16 +19,27 @@ h1 {
   color: #222f3e;
   font-family: "Press Start 2P", cursive;
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 5%;
+  font-size: 2.5rem;
+  margin: 10% auto 5%;
+  line-height: 1.8em; 
 }
 
 /* To do container */
 
 #todo-container {
-  height: 50%;
-  overflow: auto;
+  height: 50vh;
+  overflow-y: auto;
+  overflow-x: hidden; 
   width: 80%;
+}
+
+#todo-container::-webkit-scrollbar{
+  background-color: #f368e0; 
+}
+
+#todo-container::-webkit-scrollbar-thumb {
+  background-color: #222f3e; 
+  height: 50px; 
 }
 
 /* List */
@@ -44,7 +55,7 @@ li {
   border: 5px solid white;
   margin: 3%;
   padding: 5%;
-  font-size: 1.4rem;
+  font-size: 2.5rem;
 }
 
 .buttons-div {
@@ -54,19 +65,24 @@ li {
 
 /* Icons */
 button {
-  width: 5rem;
-  height: 5rem;
+  width: 5vh;
+  height: 5vh;
   text-align: center;
   margin: 0 0.5rem;
   border-style: none; 
   background-color: #f368e0; 
+  padding: 0; 
   
 }
 
 i {
   margin: 0 auto;
   padding: 0;
-  width: 100%;
+}
+
+/* increases size of icons */
+.svg-inline--fa {
+  font-size: 3rem; 
 }
 
 .marked {
@@ -76,8 +92,8 @@ i {
 /* Form */
 form {
   width: 80%;
-  padding-top: 20px;
   text-align: center;
+  margin-top: 4vh; 
 }
 
 input[type="text"] {
@@ -85,19 +101,19 @@ input[type="text"] {
   border: solid 5px #222f3e;
   width: 75%;
   padding: 1rem;
-  font-size: 1.4rem;
-  height: 6rem; 
+  font-size: 3rem;
+  height: 10vh; 
 }
 
 input[type="submit"] {
-  font-size: 1.8rem;
+  font-size: 3rem;
   font-family: "press start 2p", cursive;
   color: #222f3e;
   background-color: #f368e0;
   border: solid 5px #222f3e;
   width: 80%;
   margin: 2rem;
-  height: 6rem; 
+  height: 10vh; 
 }
 
 input[type="submit"]:hover {
