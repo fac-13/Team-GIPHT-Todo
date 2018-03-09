@@ -9,7 +9,7 @@ body {
   background-color: #ff9ff3;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   margin: 0 auto; 
 }
@@ -25,14 +25,20 @@ h1 {
   line-height: 1.8em; 
 }
 
+/* Main container */
+
+#main-container {
+  width: 80%; 
+  max-width: 700px; 
+}
+
 /* To do container */
 
 #todo-container {
   height: 50vh;
   overflow-y: auto;
   overflow-x: hidden; 
-  width: 80%;
-  max-width: 700px; 
+  width: 100%;
 }
 
 #todo-container::-webkit-scrollbar{
@@ -93,7 +99,7 @@ i {
 
 /* Form */
 form {
-  width: 80%;
+  width: 100%;
   text-align: center;
   margin-top: 4vh; 
 }
@@ -101,8 +107,7 @@ form {
 input[type="text"] {
   background-color: #fafafa;
   border: solid 5px #222f3e;
-  width: 75%;
-  max-width: 700px; 
+  width: 75%; 
   padding: 1rem;
   font-size: 3rem;
   height: 10vh; 
@@ -114,8 +119,7 @@ input[type="submit"] {
   color: #222f3e;
   background-color: #f368e0;
   border: solid 5px #222f3e;
-  width: 80%;
-  max-width: 700px; 
+  width: 100%;
   margin: 2rem;
   height: 10vh; 
 }
@@ -126,7 +130,7 @@ input[type="submit"]:hover {
   border: solid 5px #f368e0;
 }
 
-@media screen and (min-width: 600px){
+@media only screen and (min-width: 800px){
 
   h1{
     font-size: 2rem;
@@ -146,12 +150,14 @@ input[type="submit"]:hover {
   input[type="text"] {
    height: 4vh; 
    font-size: 1.3rem; 
+   width: 90%; 
+   margin: 0 auto; 
   }
   
   input[type="submit"] {
-   font-size: 1.5rem; 
-   margin: 1.5rem; 
-  }
+   font-size: 1.3rem; 
+   margin: 1.5rem auto;  
+  } 
 
 
 }
