@@ -28,8 +28,18 @@ h1 {
 
 #todo-container {
   min-height: 30vh;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden; 
   width: 80%;
+}
+
+#todo-container::-webkit-scrollbar{
+  background-color: #f368e0; 
+}
+
+#todo-container::-webkit-scrollbar-thumb {
+  background-color: #222f3e; 
+  height: 50px; 
 }
 
 /* List */
