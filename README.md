@@ -38,9 +38,9 @@ We started with the pairs that we never got to on the previous project, changing
 
 ## STRUGGLES
 
-> Implementing TDD was difficult as it was newly introduced to everyone in our team this week. Over time we got comfortable with testing and understand the importance and benefits of using TDD.
+* Implementing TDD was difficult as it was newly introduced to everyone in our team this week. Over time we got comfortable with testing and understand the importance and benefits of using TDD.
 
-> Learning to follow TDD was challenging. MarkToDo function was written before we remembered TDD, but the others were done right!
+* Learning to follow TDD was challenging. MarkToDo function was written before we remembered TDD, but the others were done right!
 
-> Some of our biggest problems came when starting on the CSS. Team members had different techniques and approaches to styling and sizing, and so when merging files together there were many inconsistencies with units used i.e heights were set in rem in some places whilst other areas used vh.
+* Some of our biggest problems came when starting on the CSS. Team members had different techniques and approaches to styling and sizing, and so when merging files together there were many inconsistencies with units used i.e heights were set in rem in some places whilst other areas used vh.
 
