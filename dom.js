@@ -24,7 +24,9 @@
 
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');
-    var deleteIcon = document.createElement("i"); 
+    deleteButtonNode.setAttribute('aria-label', "delete");
+    var deleteIcon = document.createElement("img"); 
+    deleteIcon.setAttribute('src', 'img/trash.png');
     buttonsNode.appendChild(deleteButtonNode).appendChild(deleteIcon); 
 
     deleteButtonNode.addEventListener('click', function(event) {
@@ -32,14 +34,11 @@
       update(newState);
     });
     
-    //add font awesome class to icon
-    deleteIcon.classList.add("far", "fa-trash-alt"); 
-    deleteButtonNode.setAttribute('aria-label', "delete");
-  
-
     // add markTodo button
     var markButtonNode = document.createElement('button');
-    var markIcon = document.createElement("i"); 
+    markButtonNode.setAttribute('aria-label', "mark as done");
+    var markIcon = document.createElement("img");
+    markIcon.setAttribute('src', 'img/tick.png');
     buttonsNode.appendChild(markButtonNode).appendChild(markIcon);
 
     markButtonNode.addEventListener('click', function(event) {
@@ -52,9 +51,6 @@
     } else {
       spanNode.classList.remove('marked');
     }
-    //add class to show mark icon
-    markIcon.classList.add("fas", "fa-check");
-    markButtonNode.setAttribute('aria-label', "mark as done");
     
     return todoNode;
   };
