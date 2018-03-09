@@ -58,6 +58,10 @@ li {
   font-size: 2.5rem;
 }
 
+li span {
+  word-break: break-all;
+}
+
 .buttons-div {
   display: flex;
   flex-wrap: nowrap;
