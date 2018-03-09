@@ -82,12 +82,14 @@ button {
   text-align: center;
   margin: 0 0.5rem;
   border-style: none; 
-  background-color: #f368e0; 
+  background-color: #ff9ff3; 
   padding: 0; 
   
 }
 
-i {
+img {
+  height: 80%;
+  width: 80%;
   margin: 0 auto;
   padding: 0;
 }
