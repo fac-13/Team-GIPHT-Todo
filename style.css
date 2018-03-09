@@ -11,6 +11,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin: 0 auto; 
 }
 
 /* Header */
@@ -31,6 +32,7 @@ h1 {
   overflow-y: auto;
   overflow-x: hidden; 
   width: 80%;
+  max-width: 700px; 
 }
 
 #todo-container::-webkit-scrollbar{
@@ -100,6 +102,7 @@ input[type="text"] {
   background-color: #fafafa;
   border: solid 5px #222f3e;
   width: 75%;
+  max-width: 700px; 
   padding: 1rem;
   font-size: 3rem;
   height: 10vh; 
@@ -112,6 +115,7 @@ input[type="submit"] {
   background-color: #f368e0;
   border: solid 5px #222f3e;
   width: 80%;
+  max-width: 700px; 
   margin: 2rem;
   height: 10vh; 
 }
@@ -120,4 +124,34 @@ input[type="submit"]:hover {
   color: #fafafa;
   background-color: #222f3e;
   border: solid 5px #f368e0;
+}
+
+@media screen and (min-width: 600px){
+
+  h1{
+    font-size: 2rem;
+    margin: 3% auto; 
+  }
+
+  li {
+    font-size: 1.3rem; 
+    padding: 2%; 
+  }
+ 
+  /* size of icons */
+  .svg-inline--fa {
+    font-size: 1.3rem; 
+  }
+
+  input[type="text"] {
+   height: 4vh; 
+   font-size: 1.3rem; 
+  }
+  
+  input[type="submit"] {
+   font-size: 1.5rem; 
+   margin: 1.5rem; 
+  }
+
+
 }
