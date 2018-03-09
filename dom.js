@@ -67,6 +67,7 @@
       // hint: todoFunctions.addTodo
       var newState = todoFunctions.addTodo(state, description);
       update(newState);
+      addTodoForm.reset(); 
     });
   }
 
