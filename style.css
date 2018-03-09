@@ -65,19 +65,24 @@ li {
 
 /* Icons */
 button {
-  width: 5rem;
-  height: 5rem;
+  width: 5vh;
+  height: 5vh;
   text-align: center;
   margin: 0 0.5rem;
   border-style: none; 
   background-color: #f368e0; 
+  padding: 0; 
   
 }
 
 i {
   margin: 0 auto;
   padding: 0;
-  width: 100%;
+}
+
+/* increases size of icons */
+.svg-inline--fa {
+  font-size: 3rem; 
 }
 
 .marked {
